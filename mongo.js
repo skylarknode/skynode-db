@@ -91,15 +91,15 @@ MongoDbConn.defaults = {
     database: 'default'
 };
 
-/** @class MongoStore
-    @extends BaseStore */
-var MongoStore = BaseDbConn.BaseStore.extend(
-/** @lends MongoStore# */
+/** @class Collection
+    @extends Collection */
+var Collection = BaseDbConn.Collection.extend(
+/** @lends Collection# */
 {
     /** @method */
     initialize: function(db, name, options) {
         options = _.extend({keyPath: '_id'}, options || {});
-        BaseDbConn.BaseStore.prototype.initialize.call(this, db, name, options);
+        BaseDbConn.Collection.prototype.initialize.call(this, db, name, options);
 
         this._collection = null;
     },
@@ -207,5 +207,5 @@ var MongoStore = BaseDbConn.BaseStore.extend(
 
 /** @module mongodb */
 
-MongoDbConn.MongoStore = MongoStore;
+MongoDbConn.Collection = Collection;
 module.exports = MongoDbConn;

@@ -81,10 +81,10 @@ SqlDbConn.defaults = {
 };
 
 
-/** @class SqlStore
-    @extends BaseStore */
-var SqlStore = BaseDbConn.BaseStore.extend(
-/** @lends SqlStore# */
+/** @class Collection
+    @extends Collection */
+var Collection = BaseDbConn.Collection.extend(
+/** @lends Collection# */
 {
     /** @method */
     get: function(directives) {
@@ -221,6 +221,6 @@ var SqlStore = BaseDbConn.BaseStore.extend(
 
 /** @module sql */
 
-SqlDbConn.SqlStore = SqlStore;
+SqlDbConn.Collection = Collection;
 
 module.exports = SqlDbConn;

@@ -90,13 +90,13 @@ _.extend(BaseDbConn.prototype,
 
 
 
-/** @class BaseStore */
-function BaseStore() {
+/** @class Collection */
+function Collection() {
     this.initialize.apply(this, arguments);
 }
 
-_.extend(BaseStore.prototype,
-/** @lends BaseStore# */
+_.extend(Collection.prototype,
+/** @lends Collection# */
 {
     /** Initialize the backend instance
         @constructs */
@@ -245,10 +245,10 @@ _.extend(BaseStore.prototype,
   };
 
 /** Class inheritance */
-BaseStore.extend = extend;
+Collection.extend = extend;
 
 /** Class inheritance */
 BaseDbConn.extend = extend;
-BaseDbConn.BaseStore = BaseStore;
+BaseDbConn.Collection = Collection;
 
 module.exports = BaseDbConn;

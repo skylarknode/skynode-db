@@ -135,14 +135,14 @@ var JsonliteDb = BaseDbConn.extend(
 });
 
 
-/** @class JsonliteStore
-    @extends BaseStore */
-JsonliteDb.JsonliteStore = BaseDbConn.BaseStore.extend({
+/** @class Collection
+    @extends Collection */
+JsonliteDb.Collection = BaseDbConn.Collection.extend({
 /** @lends MongoStore# */
 
     /** @method */
     initialize: function(db, name, options) {
-        BaseDbConn.BaseStore.prototype.initialize.call(this, db, name, options);
+        BaseDbConn.Collection.prototype.initialize.call(this, db, name, options);
         this.space = db.ensureSpace(name);
         this._ = this.space.get(name);
     },
