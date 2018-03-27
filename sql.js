@@ -27,7 +27,7 @@ var SqlDbConn = BaseDbConn.extend(
 
     /** @method */
     get: function(name, options) {
-        return new SqlStore(this, name, options);
+        return new Collection(this, name, options);
     },
 
     /** @method */
@@ -37,7 +37,7 @@ var SqlDbConn = BaseDbConn.extend(
 
     /** @method */
     drop: function(name) {
-        return this.runSql('DROP TABLE ' + SqlStore.prototype.escapeIdentifier(name));
+        return this.runSql('DROP TABLE ' + Collection.prototype.escapeIdentifier(name));
     },
 
     /** @method */

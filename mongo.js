@@ -32,14 +32,14 @@ var MongoDbConn = BaseDbConn.extend(
 
     /** @method */
     get: function(name, options) {
-        return new MongoStore(this, name, options);
+        return new Collection(this, name, options);
     },
 
     /** @method */
     create: function(name, options) {
         return this.open().then(function(db) {
             return Q.ninvoke(db, 'collection', name).then(function() {
-                return new MongoStore(this, name, options);
+                return new Collection(this, name, options);
             });
         });
     },

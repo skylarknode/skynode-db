@@ -31,14 +31,14 @@ var JsonliteDb = BaseDbConn.extend(
         this._directory = opts.directory;
         this._masterFileName = opts.master_file_name || "master.json";
         this._masterFilePath = this._directory + "/" + this._masterFileName;
-        	
+          
         this._spaces = {
         };
         this._tablespaces = {
         };
 
-	      this._masterSpace = this._openTableSpace(this._masterFilePath);
-	      this._tables = this._masterSpace.get("tables");
+        this._masterSpace = this._openTableSpace(this._masterFilePath);
+        this._tables = this._masterSpace.get("tables");
         debug("tables:" + JSON.stringify(this._tables.value()));
         this._stores = {};
     },
@@ -91,7 +91,7 @@ var JsonliteDb = BaseDbConn.extend(
         debug("name:" + name);
         var store = this._stores[name];
         if (!store) {
-            store = this._stores[name] = new JsonliteDb.JsonliteStore(this,name,options);
+            store = this._stores[name] = new JsonliteDb.Collection(this,name,options);
         }
         return store;
     },
