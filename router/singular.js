@@ -2,8 +2,9 @@
 
 const utils = require('./utils');
 
-module.exports = function (router,db, name) {
+module.exports = function (router,db, name,basePath) {
   //var router = app;//express.Router();
+  basePath = basePath || "";
 
   function show(req, res, next) {
     //res.locals.data = db.get(name).value();
@@ -24,7 +25,7 @@ module.exports = function (router,db, name) {
     utils.respond(db.get(name).assign(req.body),res);
   }
 
-  router.route('/' + name).get(show).post(create).put(replace).patch(update);
+  router.route(basePath + '/' + name).get(show).post(create).put(replace).patch(update);
 
   return router;
 };

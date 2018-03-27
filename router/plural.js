@@ -4,9 +4,12 @@ var pluralize = require('pluralize');
 var utils = require('./utils');
 var  Q = require('q');
 
-module.exports = function (router,db, name) {
+module.exports = function (router,db, name,basePath) {
   // Create router
   //var router = express.Router();
+
+  basePath = basePath || "";
+
 
   // Embed function used in GET /name and GET /name/id
   function embed(resource, e) {
@@ -119,9 +122,9 @@ module.exports = function (router,db, name) {
     utils.respond(db.get(name).remove(req.params.id),res);
   }
 
-  router.route('/' + name).get(list).post(create);
+  router.route(basePath + '/' + name).get(list).post(create);
 
-  router.route('/' +name + '/:id').get(show).put(replace).patch(update).delete(destroy);
+  router.route(basePath + '/' +name + '/:id').get(show).put(replace).patch(update).delete(destroy);
 
   return router;
 };

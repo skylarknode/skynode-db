@@ -62,7 +62,7 @@ _.extend(BaseDbConn.prototype,
 
     },
 
-    routing : function(router) {
+    routing : function(router,basePath) {
         var self = this;
         return {
             plural : function (names) {
@@ -71,7 +71,7 @@ _.extend(BaseDbConn.prototype,
                     names = [names];
                 } 
                 names.forEach(function(name){
-                    r(router,self,name);
+                    r(router,self,name,basePath);
                 });                
             },
             singular : function (names) {
@@ -80,7 +80,7 @@ _.extend(BaseDbConn.prototype,
                     names = [names];
                 } 
                 names.forEach(function(name){
-                    r(router,self,name);
+                    r(router,self,name，basePath);
                 });                
             }
         };
