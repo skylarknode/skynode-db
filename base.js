@@ -80,7 +80,7 @@ _.extend(BaseDbConn.prototype,
                     names = [names];
                 } 
                 names.forEach(function(name){
-                    r(router,self,name，basePath);
+                    r(router,self,name,basePath);
                 });                
             }
         };
