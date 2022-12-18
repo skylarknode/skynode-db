@@ -29,7 +29,7 @@
     "mongodb": "^4.0.0",
     "pluralize": "^8.0.0",
     "q": "^1.0.0",
-    "underscore-db": "^0.12.2",
-    "util": "^0.12.5"
+    "underscore-db": "^0.0.0",
+    "util": "^0.0.0"
   }
 }
