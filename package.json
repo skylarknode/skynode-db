@@ -18,42 +18,18 @@
   "scripts": {
     "explorer": "./node_modules/.bin/snodesrv -c ./examples/explorer/web.json"
   },
-  "dependencies": {
-    "lowdb": "^1.0.0",
-    "mongodb": "^3.0.4",
-    "pluralize": "^7.0.0",
-    "q": "~0.9.7",
-    "shortid": "^2.2.8",
-    "underscore": "~1.5.2",
-    "underscore-db": "^0.12.2",
-    "util": "^0.10.3"
-  },
-  "devDependencies": {
-    "glob": "^7.0.5",
-    "grunt": "^1.0.1",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-uglify": "^2.3.0",
-    "hamljs": "^0.6.2",
-    "hbs-utils": "0.0.3",
-    "is-glob": "^4.0.0",
-    "memory-cache": "^0.2.0",
-    "micromatch": "^3.1.9",
-    "mocha": "~1.21.4",
-    "natural": "^0.5.6",
-    "promise-spawner": "^2.0.0",
-    "proxyquire": "^1.7.10",
-    "rss": "^1.2.2",
-    "should": "~1.2.2",
-    "sinon": "~1.7.3",
-    "skynode-server": "https://github.com/skylarknode/skynode-server#master",
-    "tap": "^6.3.2",
-    "tap-only": "0.0.5",
-    "util": "^0.10.3"
-  },
   "engines": {
-    "node": "7"
+    "node": ">=18"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.0.0",
+    "lodash": "^4.0.0",
+    "lowdb": "^5.0.0",
+    "mongodb": "^4.0.0",
+    "pluralize": "^8.0.0",
+    "q": "^1.0.0",
+    "underscore-db": "^0.12.2",
+    "util": "^0.12.5"
+  }
 }

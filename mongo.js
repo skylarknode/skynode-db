@@ -1,7 +1,7 @@
 var Db = require('mongodb').Db,
     Server = require('mongodb').Server,
     Q = require('q'),
-    _ = require('underscore'),
+    _ = require('lodash'),
     BaseDbConn = require('./base');
 
 
