@@ -29,6 +29,7 @@
     "mongodb": "^4.0.0",
     "pluralize": "^8.0.0",
     "q": "^1.0.0",
+    "shortid" : "^2.x",
     "underscore-db": "~0",
     "util": "~0"
   }
